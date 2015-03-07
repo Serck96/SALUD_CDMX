@@ -20,7 +20,7 @@
     <link href="css/Style.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="css/theme.css" rel="stylesheet">
-
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -83,8 +83,12 @@
                     <div class="row">
                         <div class="col-md-4">
                             <p>Contactanos</p>
-                            <p>Facebook</p>
-                            <p>twitter</p>
+                            <h2><i class="fa fa-facebook-official"></i>
+                            <i class="fa fa-youtube-play "></i>
+                            <i class="fa fa-twitter "></i>
+                            <i class="fa fa-pinterest-square"></i>
+                            <i class="fa fa-instagram "></i>
+                            </h2>
                         </div>
                         <div class="col-md-8">
                             <p>Conocenos</p>
@@ -93,7 +97,7 @@
                     </div>
                     
                         <button type="button" class="close" aria-hidden="true">
-                            <a   href="#"> 
+                            <a   href="#"  class="back-to-top" style="display:block;"> 
                                 <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
                             </a>
                            </button>
@@ -101,9 +105,7 @@
                     <p class="pull-right fixed"></p>
                     <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
                 </footer>
-                 <a  class="back-to-top" Style="display:block;"> 
-                                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                            </a>
+
             </div>
 
 
