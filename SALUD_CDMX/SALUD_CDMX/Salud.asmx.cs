@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace SALUD_CDMX
@@ -20,15 +21,15 @@ namespace SALUD_CDMX
     {
 
         [WebMethod]
-        public string IniciaSesion(String user, String pass)
+        public XmlDocument IniciaSesion(String user, String pass)
         {
             Datos sql = new Datos();
             DataTable tbl = sql.TraeDataTable("sp_IniciaSesion", user, pass);
             int cont = 0;
-            String resultado = "";
+            String resultado = "<xml>";
             foreach (DataRow row in tbl.Rows)
             {
-                resultado += "<Usuario>";
+                resultado += "<usuario>";
                 foreach (var item in row.ItemArray)
                 {
                     if (cont == 0)
@@ -39,17 +40,20 @@ namespace SALUD_CDMX
                     else if (cont == 1)
                     {
 
-                        XElement result = new XElement("Rol", Convert.ToString(item));
+                        XElement result = new XElement("rol", Convert.ToString(item));
                         resultado += Convert.ToString(result);
 
                     }
 
                     cont++;
                 }
-                resultado += "</Usuario>";
+                resultado += "</usuario>";
                 cont = 0;
             }
-            return resultado;
+            resultado += "</xml>";
+            XmlDocument xm = new XmlDocument();
+            xm.LoadXml(resultado);
+            return xm;
         }
     }
 }
