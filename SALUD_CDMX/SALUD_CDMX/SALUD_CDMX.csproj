@@ -70,11 +70,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Estilos\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test\Test.cs" />
     <Content Include="App_Code\DatosSql.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
