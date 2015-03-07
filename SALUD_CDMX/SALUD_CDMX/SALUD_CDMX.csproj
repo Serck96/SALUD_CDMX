@@ -70,6 +70,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Estilos\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
