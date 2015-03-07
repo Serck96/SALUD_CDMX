@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SALUD_CDMX.master.cs" Inherits="SALUD_CDMX.SALUD_CDMX" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,16 +15,17 @@
     <title>Salud CDMX</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="<%=ResolveUrl("~/css/bootstrap.min.css") %>" rel="stylesheet" />
     <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/Style.css" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/css/bootstrap-theme.min.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/css/Style.css") %>" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="<%=ResolveUrl("~/css/theme.css") %>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/css/font-awesome.min.css") %>" rel="stylesheet" />
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="<%=ResolveUrl("~/js/ie-emulation-modes-warning.js") %>"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -72,8 +74,10 @@
 
             </div>
             <div id="Contenido">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
+                <form id="form1" runat="server">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
             </div>
 
 
@@ -84,10 +88,10 @@
                         <div class="col-md-4">
                             <p>Contactanos</p>
                             <h2><i class="fa fa-facebook-official"></i>
-                            <i class="fa fa-youtube-play "></i>
-                            <i class="fa fa-twitter "></i>
-                            <i class="fa fa-pinterest-square"></i>
-                            <i class="fa fa-instagram "></i>
+                                <i class="fa fa-youtube-play "></i>
+                                <i class="fa fa-twitter "></i>
+                                <i class="fa fa-pinterest-square"></i>
+                                <i class="fa fa-instagram "></i>
                             </h2>
                         </div>
                         <div class="col-md-8">
@@ -95,13 +99,13 @@
                             <p></p>
                         </div>
                     </div>
-                    
-                        <button type="button" class="close" aria-hidden="true">
-                            <a   href="#"  class="back-to-top" style="display:block;"> 
-                                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-                            </a>
-                           </button>
-                    
+
+                    <button type="button" class="close" aria-hidden="true">
+                        <a href="#" class="back-to-top" style="display: block;">
+                            <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                        </a>
+                    </button>
+
                     <p class="pull-right fixed"></p>
                     <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
                 </footer>
@@ -114,10 +118,10 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
+    <script src="<%=ResolveUrl("~/js/bootstrap.min.js") %>"></script>
+    <script src="<%=ResolveUrl("~/js/docs.min.js") %>"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<%=ResolveUrl("~/js/ie10-viewport-bug-workaround.js") %>"></script>
 
 
 </body>
