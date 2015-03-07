@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SALUD_CDMX
 {
-    public partial class MasterSaludCDMX : System.Web.UI.MasterPage
+    public partial class SALUD_CDMX : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

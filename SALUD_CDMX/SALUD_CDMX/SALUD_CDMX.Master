@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SALUD_CDMX.master.cs" Inherits="SALUD_CDMX.SALUD_CDMX" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Salud CDMX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/Style.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body role="document">
+    <div id="PaginaGeneral">
+        <div id="boxed" style="width: 80%; position: relative; left: 10%;">
+            <div id="Cabecera">
+                <header class="jumbotron hero-spacer">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1;">
+                        <div class="container" width="80%">
+
+                            <div class="col-sm-3 col-md-3 pull-right">
+
+                                <a class="navbar-brand" href="#">
+                                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Imagenes/Logo 190 CDMX.png" Width="150px" />
+                                </a>
+                            </div>
+
+
+                            <!--/.nav-collapse -->
+                        </div>
+                    </nav>
+
+                    <div class="bs-callout bs-callout-info" id="callout-navs-tabs-plugin">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </header>
+
+            </div>
+            <div id="Contenido">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+
+            <div id="footer">
+                <footer>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Contactanos</p>
+                            <p>Facebook</p>
+                            <p>twitter</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p>Conocenos</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                        <button type="button" class="close" aria-hidden="true">
+                            <a   href="#"> 
+                                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                            </a>
+                           </button>
+                    
+                    <p class="pull-right fixed"></p>
+                    <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                </footer>
+                 <a  class="back-to-top" Style="display:block;"> 
+                                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                            </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+</html>
+

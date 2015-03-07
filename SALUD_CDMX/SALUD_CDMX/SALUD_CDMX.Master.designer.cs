@@ -10,7 +10,7 @@
 namespace SALUD_CDMX {
     
     
-    public partial class MasterSaludCDMX {
+    public partial class SALUD_CDMX {
         
         /// <summary>
         /// head control.
