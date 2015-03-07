@@ -23,7 +23,10 @@ namespace SALUD_CDMX.App_Code
         this._cadenaConex = cadenaConex;
         this._conectarBD.ConnectionString = this._cadenaConex;
     }
-
+    public void clasea()
+    {
+        String hola = "";
+    }
     public void Ejecutar(String StoredProcedure, params Object[] parametros)
     {
         SqlCommand sql = new SqlCommand(StoredProcedure + " " + cargaParametros(parametros), this._conectarBD);
