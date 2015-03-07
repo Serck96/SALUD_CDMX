@@ -5,21 +5,20 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace SALUD_CDMX.App_Code
+namespace SALUD_CDMX
 {
-    public class DatosSql
+    public class Datos
     {
-        //test 2
         String _cadenaConex = "";
         SqlConnection _conectarBD = new SqlConnection();
 
-        public DatosSql()
+        public Datos()
         {
             this._cadenaConex = System.Configuration.ConfigurationManager.AppSettings["cadena_conex"].ToString();
             this._conectarBD.ConnectionString = this._cadenaConex;
         }
 
-        public DatosSql(String cadenaConex)
+        public Datos(String cadenaConex)
         {
             this._cadenaConex = cadenaConex;
             this._conectarBD.ConnectionString = this._cadenaConex;
