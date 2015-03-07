@@ -9,7 +9,7 @@ namespace SALUD_CDMX.App_Code
 {
     public class DatosSql
     {
-        //test
+        //test 2
         String _cadenaConex = "";
         SqlConnection _conectarBD = new SqlConnection();
 
