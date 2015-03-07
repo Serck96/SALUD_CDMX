@@ -17,10 +17,7 @@ namespace SALUD_CDMX.App_Code
         this._cadenaConex = System.Configuration.ConfigurationManager.AppSettings["cadena_conex"].ToString();
         this._conectarBD.ConnectionString = this._cadenaConex;
        }
-       public void test()
-       { 
-       
-       }
+    
     public DatosSql(String cadenaConex)
     {
         this._cadenaConex = cadenaConex;
