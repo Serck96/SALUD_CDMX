@@ -8,7 +8,7 @@ using System.Data;
 
 namespace SALUD_CDMX
 {
-    public partial class Pacientes : System.Web.UI.Page
+    public partial class Medicos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,11 +31,11 @@ namespace SALUD_CDMX
                 Response.Redirect(".");
             }
 
-            lblidPaciente.Text = idPersona;
+            lblidMedico.Text = idPersona;
 
             if (!IsPostBack)
             {
-                traeCitasMedicas(lblidPaciente.Text);
+                traeCitasMedicas(lblidMedico.Text);
             }
         }
         private void traeCitasMedicas(String idPersona)
@@ -43,54 +43,54 @@ namespace SALUD_CDMX
             Datos sql = new Datos();
             DataTable tbl = new DataTable();
 
-            tbl = sql.TraeDataTable("sp_traeCitasPaciente", idPersona);
+            tbl = sql.TraeDataTable("sp_traeCitasMedico", idPersona);
 
             gvCitas.DataSource = tbl;
             gvCitas.DataBind();
+        }
+        protected void lnkBtnNuevaCita_Click(object sender, EventArgs e)
+        {
+            Extras Ext = new Extras();
+            String iP = Ext.encriptaB64(lblidMedico.Text);
+            //Response.Redirect("GeneraCita.aspx?iP=" + iP);
         }
 
         protected void gvCitas_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             String cmd = e.CommandName;
             String valor = e.CommandArgument.ToString();
-            
+
 
             switch (cmd)
             {
                 case "Cancelar":
-                    cancelaCita(lblidPaciente.Text, valor);
+                    cancelaCita(lblidMedico.Text, valor);
                     break;
                 case "Modificar":
                     Extras Ext = new Extras();
-                    String iP = Ext.encriptaB64(lblidPaciente.Text);
+                    String iP = Ext.encriptaB64(lblidMedico.Text);
                     String iC = Ext.encriptaB64(valor);
                     Response.Redirect("GeneraCita.aspx?iP=" + iP + "&iC=" + iC);
 
                     break;
                 case "Confirmar":
-                    confirmaCita(lblidPaciente.Text, valor);
+                    confirmaCita(lblidMedico.Text, valor);
                     break;
             }
         }
         private void cancelaCita(String idPaciente, String idCita)
         {
             Datos sql = new Datos();
-            sql.Ejecutar("sp_CancelaCitaPaciente", idCita, idPaciente);
+            //sql.Ejecutar("sp_CancelaCitaPaciente", idCita, idPaciente);
 
-            traeCitasMedicas(lblidPaciente.Text);
+            //traeCitasMedicas(lblidPaciente.Text);
         }
         private void confirmaCita(String idPaciente, String idCita)
         {
             Datos sql = new Datos();
-            sql.Ejecutar("sp_ConfirmaCitaPaciente", idCita, idPaciente);
+            //sql.Ejecutar("sp_ConfirmaCitaPaciente", idCita, idPaciente);
 
-            traeCitasMedicas(lblidPaciente.Text);
-        }
-        protected void lnkBtnNuevaCita_Click(object sender, EventArgs e)
-        {
-            Extras Ext = new Extras();
-            String iP = Ext.encriptaB64(lblidPaciente.Text);
-            Response.Redirect("GeneraCita.aspx?iP=" + iP);
+            //traeCitasMedicas(lblidPaciente.Text);
         }
     }
 }
