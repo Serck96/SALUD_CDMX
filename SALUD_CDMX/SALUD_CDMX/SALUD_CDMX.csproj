@@ -96,6 +96,7 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="wsMedico.asmx" />
     <None Include="Service References\wsSalud\Salud.wsdl" />
     <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.IniciaSesionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -127,6 +128,12 @@
     <Compile Include="Administrador\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cMedicos.cs" />
+    <Compile Include="wsMedico.asmx.cs">
+      <DependentUpon>wsMedico.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="cMedico.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="Doctor\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
