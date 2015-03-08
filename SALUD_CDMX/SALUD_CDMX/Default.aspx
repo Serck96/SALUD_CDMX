@@ -10,7 +10,7 @@
                 
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="z-index:1; width:250px; margin-right:-300px; text-align:center;">
             <form class="form-signin">
 
                 <h2 class="form-signin-heading">Iniciar sesion</h2>

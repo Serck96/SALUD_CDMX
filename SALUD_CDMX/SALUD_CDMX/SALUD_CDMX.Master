@@ -34,7 +34,7 @@
         <div id="boxed" style="width: 80%; position: relative; left: 10%;">
             <div id="Cabecera">
                 <header class="jumbotron hero-spacer">
-                    <nav class="navbar navbar-inverse navbar-fixed-top" style="z-index: 1;">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" style="z-index: 2;">
                         <div class="container" width="80%">
                             <div class="col-sm-7 col-md-3 ">
 

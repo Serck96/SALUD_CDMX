@@ -69,6 +69,7 @@
             <tr>
                 <td>
                     <h1>Datos Tutor</h1>
+                    <p>Se le recuerda que el tutor solo debe acompañar al menor a la cita.</p>
                     <br />
                     <asp:Label ID="lblNombreTutor" runat="server" Text="Nombre:" Width="150"></asp:Label>
                     <asp:TextBox ID="txtNombreTutor" runat="server"></asp:TextBox>
@@ -115,7 +116,13 @@
             </tr>
         </asp:Panel>
         <tr>
+            <td align="center">
+                <h5><b>Datos de la cuenta del solicitante de la cita</b></h5>
+            </td>
+        </tr>
+        <tr>
             <td>
+                
                 <asp:Label ID="lblUser" runat="server" Text="Usuario:" Width="150"></asp:Label>
                 <asp:TextBox ID="txtUser" runat="server"></asp:TextBox>
             </td>

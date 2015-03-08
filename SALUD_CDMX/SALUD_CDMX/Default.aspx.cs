@@ -31,7 +31,7 @@ namespace SALUD_CDMX
                     nID = nodoTipos.GetElementsByTagName("idRol");
                     nRol = nodoTipos.GetElementsByTagName("rol");
                     nIdEstatus = nodoTipos.GetElementsByTagName("idEstatus");
-                    nIdPersona= nodoTipos.GetElementsByTagName("idPersona");
+                    nIdPersona = nodoTipos.GetElementsByTagName("idPersona");
                     if (nID[z].InnerText == "")
                     {
                         lblError.Text = nRol[z].InnerText;
