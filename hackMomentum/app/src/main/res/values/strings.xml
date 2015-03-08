@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hackMomentum</string>
+
+    <string name="user">Usuario:</string>
+    <string name="password">Contraseña:</string>
+
+
+    <string name="start">Entrar</string>
+    <string name="register">Registro</string>
+
+
+    <string name="name">Nombre:</string>
+    <string name="email">Correo:</string>
+    <string name="send">Enviar</string>
+    <string name="rtn">Regresar</string>
+
+
+    <string name="diets">Buscar Citas</string>
+
+
+    <string name="Nombre">Nombre:Misael</string>
+    <string name="Correo">Corre:Morfeo2015@matrix.com</string>
+
+
+    <string name="VerLista">Citas de Pacientes</string>
+
+
+    <string name="BottonLogin">Iniciar Seccion</string>
+    <string name="title_login">Bienvenido</string>
+
+    <string name="NombreLista">Luis Alberto</string>
+    <string name="HorarioLista">8-9</string>
+    <string name="ConfirmacionLista">X</string>
+
+    <string name="TItuloNombre">Nombre</string>
+    <string name="Titulohorario">Horario</string>
+    <string name="TituloConfirmacion">Confirmacion</string>
+
+
+    <string name="NombreCliente">Nombre:Pedro</string>
+    <string name="CorreoCliente">Correo:Pedrogas69@hotmail.com</string>
+    <string name="curp">CURP:PGRD090495HDFSXS02</string>
+
+
+
+    <string name="citasconfir">Confimar Cita</string>
+    <string name="citasver">Visualisar Citas</string>
+</resources>

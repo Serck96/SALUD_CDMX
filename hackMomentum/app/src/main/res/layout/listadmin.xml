@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+    android:background="@drawable/blur1"
+    android:id="@+id/" co >
+
+
+    <TextView
+        android:textColor="#ff8c00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NombreLista"
+        android:id="@+id/q"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignTop="@+id/e"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:textColor="#ff8c00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HorarioLista"
+        android:id="@+id/w"
+        android:layout_alignTop="@+id/q"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textColor="#ff8c00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ConfirmacionLista"
+        android:id="@+id/e"
+        android:layout_marginTop="101dp"
+        android:layout_below="@+id/d"
+        android:layout_alignRight="@+id/d"
+        android:layout_alignEnd="@+id/d"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+
+
+
+    <TextView
+        android:textColor="#ff8c00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TItuloNombre"
+        android:id="@+id/a"
+        android:layout_bottom="@+id/e "
+        android:layout_alignTop="@+id/s"
+        android:layout_alignLeft="@+id/q"
+        android:layout_alignStart="@+id/q" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulohorario"
+        android:id="@+id/s"
+        android:layout_bottom="@+id/w"
+        android:textColor="#ff8c00"
+        android:layout_above="@+id/e"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textColor="#ff8c00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TituloConfirmacion"
+        android:id="@+id/d"
+        android:layout_bottom="@+id/q"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
