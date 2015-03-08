@@ -90,7 +90,8 @@ namespace SALUD_CDMX.Paciente
                         id = nID[z].InnerText;
                     }
                 }
-                Response.Redirect("~/GeneraCita.aspx?iP=" + id + "");
+                Extras Ext = new Extras();
+                Response.Redirect("~/GeneraCita.aspx?iP=" + Ext.encriptaB64(id) + "");
             }
         }
     }
