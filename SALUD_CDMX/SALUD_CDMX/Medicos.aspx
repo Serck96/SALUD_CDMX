@@ -7,6 +7,9 @@
             <td>Hola Doctor</td>
         </tr>
         <tr>
+            <td>Este estapacio esta </td>
+        </tr>
+        <tr>
             <td>Citas Médicas<asp:Label ID="lblidMedico" runat="server" Visible="False"></asp:Label>
 &nbsp;<br />
                 <asp:GridView ID="gvCitas" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="gvCitas_RowCommand" EmptyDataText="no hay citas programadas">
