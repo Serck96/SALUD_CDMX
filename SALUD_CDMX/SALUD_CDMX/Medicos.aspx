@@ -7,7 +7,7 @@
             <td>Hola Doctor</td>
         </tr>
         <tr>
-            <td>Este estapacio esta </td>
+            <td>Este estapacio es para que pueda revisar las citas programadas y/o cancelar alguna.</td>
         </tr>
         <tr>
             <td>Citas Médicas<asp:Label ID="lblidMedico" runat="server" Visible="False"></asp:Label>

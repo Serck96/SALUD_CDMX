@@ -64,12 +64,14 @@ namespace SALUD_CDMX
             switch (cmd)
             {
                 case "Cancelar":
-                    cancelaCita(lblidMedico.Text, valor);
+
+                    cancelaCita(valor.Split('-')[1].ToString(), valor.Split('-')[0].ToString());
                     break;
                 case "Modificar":
                     Extras Ext = new Extras();
-                    String iP = Ext.encriptaB64(lblidMedico.Text);
-                    String iC = Ext.encriptaB64(valor);
+
+                    String iP = Ext.encriptaB64(valor.Split('-')[1].ToString());
+                    String iC = Ext.encriptaB64(valor.Split('-')[0].ToString());
                     Response.Redirect("GeneraCita.aspx?iP=" + iP + "&iC=" + iC);
 
                     break;
@@ -81,9 +83,9 @@ namespace SALUD_CDMX
         private void cancelaCita(String idPaciente, String idCita)
         {
             Datos sql = new Datos();
-            //sql.Ejecutar("sp_CancelaCitaPaciente", idCita, idPaciente);
+            sql.Ejecutar("sp_CancelaCitaPaciente", idCita, idPaciente);
 
-            //traeCitasMedicas(lblidPaciente.Text);
+            traeCitasMedicas(lblidMedico.Text);
         }
         private void confirmaCita(String idPaciente, String idCita)
         {
