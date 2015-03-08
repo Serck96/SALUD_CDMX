@@ -139,6 +139,22 @@ namespace SALUD_CDMX
             tbl = sql.TraeDataTable("sp_GuardaCita", idPErsona, cboMedico.SelectedValue, cboCentroSalud.SelectedValue, lblDia.Text, cboHora.SelectedValue, txtFecha.Text, lblidCita.Text);
 
             lblResultado.Text = tbl.Rows[0]["msj"].ToString();
+            if (tbl.Rows[0]["estatus"].ToString() == "1")
+            {
+
+                if (tbl.Rows[0]["mail"].ToString() != "")
+                {
+                    Extras Ext = new Extras();
+
+                    String para = tbl.Rows[0]["mail"].ToString();
+                    String msg = "--: Cita Médica :--<br />Fecha y Hora: " + txtFecha.Text + " " + cboHora.Text + " <br />Centro de Salud: " + cboCentroSalud.Text + " <br />Especialidad o Servicio: " + cboEspecialidad.Text + "<br />Médico tratante:" + cboMedico.Text + "<br />Por favor regrese al sistema de citas e ingrese con el usuario y contraseña que registro para confirmar su cita de lo contrario se cancelara 3 hrs antes, gracias.";
+                    String titulo = "--: Cita Médica :--";
+                    String subject = "--: Cita Médica :--";
+
+                    Ext.EnviaMail(para, msg, titulo, subject);
+                }
+            }
+
         }
     }
 }
