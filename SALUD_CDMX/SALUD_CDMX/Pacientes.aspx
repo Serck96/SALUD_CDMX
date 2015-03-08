@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table style="width:100%;">
         <tr>
-            <td>&nbsp;</td>
+            <td>Hola aqui podras ver tus citas&nbsp; Médicas y/o reprogramas alguna</td>
         </tr>
         <tr>
             <td>Citas Médicas<asp:Label ID="lblidPaciente" runat="server" Visible="False"></asp:Label>
