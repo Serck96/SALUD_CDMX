@@ -30,6 +30,9 @@
             <div class="g6">
                 
 
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Paciente/Registro.aspx">Si no tienes cuenta para sacar tu CITA registrate aqui</asp:HyperLink>
+                
+
             </div>
 
 
