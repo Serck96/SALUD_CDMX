@@ -49,6 +49,17 @@ namespace SALUD_CDMX
 
             return tblResultado;
         }
+        public String dataTableAxml(DataTable tabla)
+        {
+            String SalidaXML = "";
+
+            System.IO.StringWriter writer = new System.IO.StringWriter();
+            tabla.WriteXml(writer, XmlWriteMode.WriteSchema, false);
+            SalidaXML = writer.ToString();
+
+            return SalidaXML;
+
+        }
 
         private String cargaParametros(params Object[] parametros)
         {
