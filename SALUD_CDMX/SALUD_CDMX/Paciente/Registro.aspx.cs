@@ -68,7 +68,7 @@ namespace SALUD_CDMX.Paciente
                 wsSalud.SaludSoapClient ws = new wsSalud.SaludSoapClient();
                 String id = Convert.ToString(ws.RegistraPaciente(txtUser.Text, txtContraseña.Text, txtNombre.Text, txtApPaterno.Text, txtApMAterno.Text, rlGenero.SelectedValue,
                     textFecha.Text, txtCURP.Text, txtNombreTutor.Text, txtApPaternoTutor.Text, txtApMaternoTutor.Text, rlGeneroTutor.SelectedValue,
-                    txtFechaTutor.Text, txtCUrpTutor.Text, Convert.ToString(Session["id"]), txtMail.Text, txtMailTutor.Text));
+                    txtFechaTutor.Text, txtCUrpTutor.Text, Convert.ToString(Session["id"]), txtMail.Text, txtMailTutor.Text,txtPeso.Text,txtAltura.Text));
                 Response.Redirect("~/GeneraCita.aspx?iP=" + id + "");
             }
             else
@@ -76,7 +76,7 @@ namespace SALUD_CDMX.Paciente
                 wsSalud.SaludSoapClient ws = new wsSalud.SaludSoapClient();
                 String id = Convert.ToString(ws.RegistraPaciente(txtUser.Text, txtContraseña.Text, txtNombre.Text, txtApPaterno.Text, txtApMAterno.Text, rlGenero.SelectedValue,
                     textFecha.Text, txtCURP.Text, txtNombreTutor.Text, txtApPaternoTutor.Text, txtApMaternoTutor.Text, rlGeneroTutor.SelectedValue,
-                    txtFechaTutor.Text, txtCUrpTutor.Text, "", txtMail.Text, txtMailTutor.Text));
+                    txtFechaTutor.Text, txtCUrpTutor.Text, "", txtMail.Text, txtMailTutor.Text, txtPeso.Text, txtAltura.Text));
                 XmlDocument docX = new XmlDocument();
                 docX.LoadXml(id);
                 XmlNodeList nID, nNombre, nApPaterno, nApMaterno, nGenero, nFecha;

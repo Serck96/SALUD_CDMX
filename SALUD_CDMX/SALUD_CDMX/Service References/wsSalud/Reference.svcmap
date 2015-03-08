@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07eabce7-24fe-4c30-b1d4-d20f6cd7cd35" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="df6b00f1-5911-4b9f-8a08-6288bb3c9c84" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:51303/Salud.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Salud.wsdl" MetadataType="Wsdl" ID="ca19ddfc-a9ce-4d81-bb70-e232b864ef7f" SourceId="1" SourceUrl="http://localhost:51303/Salud.asmx?wsdl" />
-    <MetadataFile FileName="Salud.disco" MetadataType="Disco" ID="286fa2ce-a0fe-494a-9ebf-e22b6b60b92f" SourceId="1" SourceUrl="http://localhost:51303/Salud.asmx?disco" />
+    <MetadataFile FileName="Salud.wsdl" MetadataType="Wsdl" ID="cc94e889-3f7e-4838-99cd-7980c3890077" SourceId="1" SourceUrl="http://localhost:51303/Salud.asmx?wsdl" />
+    <MetadataFile FileName="Salud.disco" MetadataType="Disco" ID="87c0dfb2-c510-4c9f-8911-a480d21e8cec" SourceId="1" SourceUrl="http://localhost:51303/Salud.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

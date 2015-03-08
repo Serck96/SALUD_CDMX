@@ -139,6 +139,42 @@ namespace SALUD_CDMX.Paciente {
         protected global::System.Web.UI.WebControls.TextBox txtMail;
         
         /// <summary>
+        /// lblPeso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPeso;
+        
+        /// <summary>
+        /// txtPeso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPeso;
+        
+        /// <summary>
+        /// lblAltura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAltura;
+        
+        /// <summary>
+        /// txtAltura control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAltura;
+        
+        /// <summary>
         /// pnTutor control.
         /// </summary>
         /// <remarks>

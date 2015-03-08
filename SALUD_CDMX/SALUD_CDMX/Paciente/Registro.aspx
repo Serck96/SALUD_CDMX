@@ -65,6 +65,18 @@
                 <asp:TextBox ID="txtMail" runat="server" ></asp:TextBox>
             </td>
         </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblPeso" runat="server" Text="Peso:" Width="150"></asp:Label>
+                <asp:TextBox ID="txtPeso" runat="server" ></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblAltura" runat="server" Text="Altura:" Width="150"></asp:Label>
+                <asp:TextBox ID="txtAltura" runat="server" ></asp:TextBox>
+            </td>
+        </tr>
         <asp:Panel ID="pnTutor" runat="server" Visible="false">
             <tr>
                 <td>

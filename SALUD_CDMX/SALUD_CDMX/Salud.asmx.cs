@@ -66,12 +66,13 @@ namespace SALUD_CDMX
         [WebMethod]
         public XmlDocument RegistraPaciente(String usuario, String pass, String nombre, String apPaterno, String apMaterno,
             String genero, String fechaNac, String curp, String nombreTutor, String apPaternoTutor, String apMaternoTutor,
-            String generoTutor, String fechaNacTutor, String curpTutor, String idPer, String mail, String mailTutor)
+            String generoTutor, String fechaNacTutor, String curpTutor, String idPer, String mail, String mailTutor,
+            String peso, String altura)
         {
             Datos sql = new Datos();
             DataTable tbl = sql.TraeDataTable("sp_GuardaPaciente", usuario, pass, nombre, apPaterno, apMaterno,
-                genero, fechaNac, curp, nombreTutor, apPaternoTutor, apMaternoTutor, generoTutor,fechaNacTutor,
-                curpTutor,idPer, mail, mailTutor);
+                genero, fechaNac, curp, nombreTutor, apPaternoTutor, apMaternoTutor, generoTutor, fechaNacTutor,
+                curpTutor, idPer, mail, mailTutor, peso, altura);
             int cont = 0;
             String resultado = "<xml>";
             foreach (DataRow row in tbl.Rows)
@@ -151,7 +152,7 @@ namespace SALUD_CDMX
             resultado += "</xml>";
             XmlDocument xm = new XmlDocument();
             xm.LoadXml(resultado);
-            return xm; 
+            return xm;
         }
         [WebMethod]
         public void ValidaCita(String idCita, String idPersona)
