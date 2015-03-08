@@ -49,11 +49,16 @@ namespace SALUD_CDMX
                         }
                         else if (nID[z].InnerText == "2")
                         {
-                            Response.Redirect("~/Doctor/index.aspx");
+                            Extras xt = new Extras();
+
+                            Response.Redirect("~/Medicos.aspx?iP=" + xt.encriptaB64(nIdPersona[z].InnerText));
                         }
                         else if (nID[z].InnerText == "4")
                         {
-                            Response.Redirect("~/Administrador/index.aspx");
+                            Extras xt = new Extras();
+
+                            Response.Redirect("~/Administradores.aspx?iP=" + xt.encriptaB64(nIdPersona[z].InnerText));
+
                         }
                         
 

@@ -79,10 +79,13 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GeneraCita.aspx" />
+    <Content Include="Imagenes\cancelar.png" />
     <Content Include="Imagenes\favicon.ico" />
     <Content Include="Imagenes\Logo 190 CDMX.png" />
     <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\Logos-Sedesa-Sspdf.png" />
+    <Content Include="Imagenes\modificar.png" />
+    <Content Include="Imagenes\palomita.jpg" />
     <Content Include="Imagenes\Sedesa.PNG" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -95,6 +98,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Medicos.aspx" />
     <Content Include="Pacientes.aspx" />
     <Content Include="Paciente\index.aspx" />
     <Content Include="Paciente\Registro.aspx" />
@@ -169,6 +173,13 @@
     </Compile>
     <Compile Include="GeneraCita.aspx.designer.cs">
       <DependentUpon>GeneraCita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Medicos.aspx.cs">
+      <DependentUpon>Medicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medicos.aspx.designer.cs">
+      <DependentUpon>Medicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.aspx.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>
