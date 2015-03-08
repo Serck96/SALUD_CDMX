@@ -61,8 +61,8 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblMail" runat="server" Text="CURP:" Width="150"></asp:Label>
-                <asp:TextBox ID="txtMail" runat="server" OnTextChanged="txtCURP_TextChanged" AutoPostBack="true"></asp:TextBox>
+                <asp:Label ID="lblMail" runat="server" Text="Correo:" Width="150"></asp:Label>
+                <asp:TextBox ID="txtMail" runat="server" ></asp:TextBox>
             </td>
         </tr>
         <asp:Panel ID="pnTutor" runat="server" Visible="false">
@@ -109,8 +109,8 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="lblMailTUtor" runat="server" Text="CURP:" Width="150"></asp:Label>
-                    <asp:TextBox ID="txtMailTutor" runat="server" OnTextChanged="txtCURP_TextChanged" AutoPostBack="true"></asp:TextBox>
+                    <asp:Label ID="lblMailTUtor" runat="server" Text="Correo:" Width="150"></asp:Label>
+                    <asp:TextBox ID="txtMailTutor" runat="server"></asp:TextBox>
                 </td>
             </tr>
         </asp:Panel>

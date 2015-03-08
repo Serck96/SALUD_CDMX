@@ -139,7 +139,7 @@ namespace SALUD_CDMX
             tbl = sql.TraeDataTable("sp_GuardaCita", idPErsona, cboMedico.SelectedValue, cboCentroSalud.SelectedValue, lblDia.Text, cboHora.SelectedValue, txtFecha.Text, lblidCita.Text);
 
             lblResultado.Text = tbl.Rows[0]["msj"].ToString();
-            if (tbl.Rows[0]["estatus"].ToString() == "1")
+            if (tbl.Rows[0]["idEstatus"].ToString() == "1")
             {
 
                 if (tbl.Rows[0]["mail"].ToString() != "")
