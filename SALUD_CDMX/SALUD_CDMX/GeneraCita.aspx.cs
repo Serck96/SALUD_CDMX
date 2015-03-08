@@ -147,7 +147,7 @@ namespace SALUD_CDMX
                     Extras Ext = new Extras();
 
                     String para = tbl.Rows[0]["mail"].ToString();
-                    String msg = "--: Cita Médica :--<br />Fecha y Hora: " + txtFecha.Text + " " + cboHora.Text + " <br />Centro de Salud: " + cboCentroSalud.Text + " <br />Especialidad o Servicio: " + cboEspecialidad.Text + "<br />Médico tratante:" + cboMedico.Text + "<br />Por favor regrese al sistema de citas e ingrese con el usuario y contraseña que registro para confirmar su cita de lo contrario se cancelara 3 hrs antes, gracias.";
+                    String msg = "--: Cita Médica :--<br />Fecha y Hora: " + txtFecha.Text + " " + cboHora.SelectedItem.Text + " <br />Centro de Salud: " + cboCentroSalud.SelectedItem.Text + " <br />Especialidad o Servicio: " + cboEspecialidad.SelectedItem.Text + "<br />Médico tratante:" + cboMedico.SelectedItem.Text + "<br />Por favor regrese al sistema de citas e ingrese con el usuario y contraseña que registro para confirmar su cita de lo contrario se cancelara 3 hrs antes, gracias.";
                     String titulo = "--: Cita Médica :--";
                     String subject = "--: Cita Médica :--";
 

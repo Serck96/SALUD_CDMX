@@ -21,7 +21,7 @@ namespace SALUD_CDMX
             String usuario = Convert.ToString(ws.IniciaSesion(txtUser.Text, txtPass.Text));
             XmlDocument docX = new XmlDocument();
             docX.LoadXml(usuario);
-            XmlNodeList nID, nRol, nIdEstatus;
+            XmlNodeList nID, nRol, nIdEstatus, nIdPersona;
             XmlNodeList resultado = docX.GetElementsByTagName("usuario");
             if (resultado.Count >= 1)
             {
@@ -31,6 +31,7 @@ namespace SALUD_CDMX
                     nID = nodoTipos.GetElementsByTagName("idRol");
                     nRol = nodoTipos.GetElementsByTagName("rol");
                     nIdEstatus = nodoTipos.GetElementsByTagName("idEstatus");
+                    nIdPersona= nodoTipos.GetElementsByTagName("idPersona");
                     if (nID[z].InnerText == "")
                     {
                         lblError.Text = nRol[z].InnerText;
@@ -44,7 +45,7 @@ namespace SALUD_CDMX
                         {
                             Extras xt = new Extras();
                             
-                            Response.Redirect("~/Pacientes.aspx?iP="+xt.encriptaB64(nID[z].InnerText));
+                            Response.Redirect("~/Pacientes.aspx?iP="+xt.encriptaB64(nIdPersona[z].InnerText));
                         }
                         else if (nID[z].InnerText == "2")
                         {

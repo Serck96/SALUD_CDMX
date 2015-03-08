@@ -47,10 +47,11 @@ namespace SALUD_CDMX
                     else if (cont == 2)
                     {
 
-                        XElement result = new XElement("idEstatus", Convert.ToString(item));
+                        XElement result = new XElement("idPersona", Convert.ToString(item));
                         resultado += Convert.ToString(result);
 
                     }
+
 
                     cont++;
                 }
