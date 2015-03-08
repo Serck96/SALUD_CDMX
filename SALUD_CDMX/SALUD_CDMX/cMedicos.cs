@@ -6,14 +6,15 @@ using System.Data;
 
 namespace SALUD_CDMX
 {
-
-    public class cMedico
+    public class cMedicos
     {
         private String _PersonaId;
         private String _NombreMedico;
         private String _APMedico;
         private String _AMMedico;
         private String _Email;
+        private String _ContactoId;
+        private String _TipoContactoId;
         private String _Contacto;
         private String _Especialidad;
         private String _Facultad;
@@ -35,13 +36,14 @@ namespace SALUD_CDMX
         private String _DInterior;
         private String _DColonia;
         private String _DCodigoPostal;
+        private String _DDireccionId;
 
-        public cMedico()
+        public cMedicos()
         {
 
         }
        
-        public String[] cMedico(String idPersonaD,String NombreD,String ApPatD,String ApMatD,String GeneroD,String FecNacD,String CURPD,String CedulaD)
+        public cMedicos(String idPersonaD,String NombreD,String ApPatD,String ApMatD,String GeneroD,String FecNacD,String CURPD,String CedulaD)
         {
             this.PersonaId = idPersonaD;
             this.NombreMedico = NombreD;
@@ -51,9 +53,25 @@ namespace SALUD_CDMX
             this.Genero = GeneroD;
             this.CURP = CURPD;
             this.Cedula = CedulaD;
-
-            return RegistroMedico();
-
+        }
+        public cMedicos(String idDatos,String idPersona,String idTipoContacto,String Contacto)
+        {
+            this._ContactoId = idDatos;
+            this._PersonaId = idPersona;
+            this._TipoContactoId = idTipoContacto;
+            this._Contacto = Contacto;
+        }
+        public cMedicos(String idDireccion,String idPersona,String idEstado,String idMunicipio,String Calle,String NE,String NI,String Colonia,String CP)
+        {
+            this.DDireccionId = idDireccion;
+            this.PersonaId = idPersona;
+            this.DEstado = idEstado;
+            this.DMunicipio = idMunicipio;
+            this.DCalle = Calle;
+            this.DExterior = NE;
+            this.DInterior = NI;
+            this.DColonia = Colonia;
+            this.DCodigoPostal = CP;
         }
         #region Propiedades
 
@@ -87,6 +105,16 @@ namespace SALUD_CDMX
                 get { return _Contacto; }
                 set { _Contacto = value; }
             }
+            public String TipoContactoId
+            {
+                get { return _TipoContactoId; }
+                set { _TipoContactoId = value; }
+            }
+            public String ContactoId
+            {
+                get { return _ContactoId; }
+                set { _ContactoId = value; }
+            }
             public String Especialidad
             {
                 get { return _Especialidad; }
@@ -110,7 +138,7 @@ namespace SALUD_CDMX
             public String Genero
             {
                 get { return _Genero; }
-                set { _Cedula = value; }
+                set { _Genero = value; }
             }
             public String CURP
             {
@@ -188,11 +216,16 @@ namespace SALUD_CDMX
                 get { return _DCodigoPostal; }
                 set { _DCodigoPostal = value; }
             }
+            public String DDireccionId
+            {
+                get { return _DDireccionId; }
+                set { _DDireccionId = value; }
+            }
         #endregion
 
         #region Metodos
 
-          private String[] RegistroMedico()
+          public String[] RegistroMedico()
             {
                String[] Parametros = new String[2];
                Datos sql = new Datos();
@@ -207,6 +240,40 @@ namespace SALUD_CDMX
 
                return Parametros;
             }
+
+        public DataTable Contactos()
+        {
+            DataTable tblContactos = new DataTable();
+            Datos sql = new Datos();
+            sql.Ejecutar("sp_GuardaContacto",_ContactoId,_PersonaId,_TipoContactoId,_Contacto);
+            tblContactos = sql.TraeDataTable("sp_GuardaContacto", "1", _PersonaId, _TipoContactoId, "");
+            return tblContactos;
+        }
+
+        public DataTable TraeContactos()
+        {
+            DataTable tblContactos = new DataTable();
+            Datos sql = new Datos();
+            tblContactos = sql.TraeDataTable("sp_GuardaContacto", "1", _PersonaId, _TipoContactoId, "");
+            return tblContactos;
+        }
+
+        public DataTable Direccion()
+        {
+            DataTable tblDireccion = new DataTable();
+            Datos sql = new Datos();
+            sql.Ejecutar("sp_GuardaDireccion",_DDireccionId,_PersonaId,_DEstado,_DMunicipio,_DCalle,_DExterior,_DInterior,_DColonia,_DCodigoPostal);
+            tblDireccion = sql.TraeDataTable("sp_GuardaDireccion", "1",_PersonaId,_DEstado,_DMunicipio,"",_DExterior,_DInterior,_DColonia,_DCodigoPostal);
+            return tblDireccion;
+        }
+        public DataTable TraeDirecciones()
+        {
+            DataTable tblDireccion = new DataTable();
+            Datos sql = new Datos();
+           
+            tblDireccion = sql.TraeDataTable("sp_GuardaDireccion", "1",_PersonaId,_DEstado,_DMunicipio,"",_DExterior,_DInterior,_DColonia,_DCodigoPostal);
+            return tblDireccion;
+        }
 
             
 

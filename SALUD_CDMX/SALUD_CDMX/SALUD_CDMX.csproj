@@ -129,11 +129,6 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="cMedicos.cs" />
-    <Compile Include="wsMedico.asmx.cs">
-      <DependentUpon>wsMedico.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Content Include="cMedico.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="Doctor\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -172,6 +167,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="wsMedico.asmx.cs">
+      <DependentUpon>wsMedico.asmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
