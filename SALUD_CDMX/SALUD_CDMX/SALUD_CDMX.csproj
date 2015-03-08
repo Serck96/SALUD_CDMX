@@ -77,8 +77,10 @@
     <Content Include="Doctor\index.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Imagenes\favicon.ico" />
     <Content Include="Imagenes\Logo 190 CDMX.png" />
     <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\Logos-Sedesa-Sspdf.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -89,6 +91,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Paciente\index.aspx" />
+    <Content Include="Paciente\Registro.aspx" />
     <Content Include="Salud.asmx" />
     <Content Include="SALUD_CDMX.Master" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -97,8 +100,24 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="wsMedico.asmx" />
+    <Content Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
     <None Include="Service References\wsSalud\Salud.wsdl" />
     <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.IniciaSesionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.RegistraPacienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.ValidaCitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.ValidaDatosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.VerificaCuentaMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsSalud\SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
@@ -144,6 +163,13 @@
     <Compile Include="Paciente\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paciente\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paciente\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Salud.asmx.cs">
       <DependentUpon>Salud.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -170,6 +196,7 @@
     </Compile>
     <Compile Include="wsMedico.asmx.cs">
       <DependentUpon>wsMedico.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

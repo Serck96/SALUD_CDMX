@@ -21,6 +21,41 @@ namespace SALUD_CDMX.wsSalud {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IniciaSesion", ReplyAction="*")]
         System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.IniciaSesionResponse> IniciaSesionAsync(global::SALUD_CDMX.wsSalud.IniciaSesionRequest request);
+        
+        // CODEGEN: Generating message contract since element name usuario from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RegistraPaciente", ReplyAction="*")]
+        global::SALUD_CDMX.wsSalud.RegistraPacienteResponse RegistraPaciente(global::SALUD_CDMX.wsSalud.RegistraPacienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RegistraPaciente", ReplyAction="*")]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.RegistraPacienteResponse> RegistraPacienteAsync(global::SALUD_CDMX.wsSalud.RegistraPacienteRequest request);
+        
+        // CODEGEN: Generating message contract since element name Curp from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ValidaDatos", ReplyAction="*")]
+        global::SALUD_CDMX.wsSalud.ValidaDatosResponse ValidaDatos(global::SALUD_CDMX.wsSalud.ValidaDatosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ValidaDatos", ReplyAction="*")]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaDatosResponse> ValidaDatosAsync(global::SALUD_CDMX.wsSalud.ValidaDatosRequest request);
+        
+        // CODEGEN: Generating message contract since element name idCita from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ValidaCita", ReplyAction="*")]
+        global::SALUD_CDMX.wsSalud.ValidaCitaResponse ValidaCita(global::SALUD_CDMX.wsSalud.ValidaCitaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ValidaCita", ReplyAction="*")]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaCitaResponse> ValidaCitaAsync(global::SALUD_CDMX.wsSalud.ValidaCitaRequest request);
+        
+        // CODEGEN: Generating message contract since element name id from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VerificaCuentaMail", ReplyAction="*")]
+        global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse VerificaCuentaMail(global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VerificaCuentaMail", ReplyAction="*")]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse> VerificaCuentaMailAsync(global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest request);
+        
+        // CODEGEN: Generating message contract since element name curp from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VerificaCuentaTelefono", ReplyAction="*")]
+        global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse VerificaCuentaTelefono(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VerificaCuentaTelefono", ReplyAction="*")]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse> VerificaCuentaTelefonoAsync(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -85,13 +120,392 @@ namespace SALUD_CDMX.wsSalud {
     public partial class IniciaSesionResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string IniciaSesionResult;
+        public System.Xml.Linq.XElement IniciaSesionResult;
         
         public IniciaSesionResponseBody() {
         }
         
-        public IniciaSesionResponseBody(string IniciaSesionResult) {
+        public IniciaSesionResponseBody(System.Xml.Linq.XElement IniciaSesionResult) {
             this.IniciaSesionResult = IniciaSesionResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RegistraPacienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistraPaciente", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody Body;
+        
+        public RegistraPacienteRequest() {
+        }
+        
+        public RegistraPacienteRequest(global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class RegistraPacienteRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string usuario;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string pass;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string apPaterno;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string apMaterno;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string genero;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string fechaNac;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string curp;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string nombreTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public string apPaternoTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string apMaternoTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        public string generoTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
+        public string fechaNacTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
+        public string curpTutor;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
+        public string idPer;
+        
+        public RegistraPacienteRequestBody() {
+        }
+        
+        public RegistraPacienteRequestBody(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+            this.usuario = usuario;
+            this.pass = pass;
+            this.nombre = nombre;
+            this.apPaterno = apPaterno;
+            this.apMaterno = apMaterno;
+            this.genero = genero;
+            this.fechaNac = fechaNac;
+            this.curp = curp;
+            this.nombreTutor = nombreTutor;
+            this.apPaternoTutor = apPaternoTutor;
+            this.apMaternoTutor = apMaternoTutor;
+            this.generoTutor = generoTutor;
+            this.fechaNacTutor = fechaNacTutor;
+            this.curpTutor = curpTutor;
+            this.idPer = idPer;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class RegistraPacienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistraPacienteResponse", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.RegistraPacienteResponseBody Body;
+        
+        public RegistraPacienteResponse() {
+        }
+        
+        public RegistraPacienteResponse(global::SALUD_CDMX.wsSalud.RegistraPacienteResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class RegistraPacienteResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Xml.Linq.XElement RegistraPacienteResult;
+        
+        public RegistraPacienteResponseBody() {
+        }
+        
+        public RegistraPacienteResponseBody(System.Xml.Linq.XElement RegistraPacienteResult) {
+            this.RegistraPacienteResult = RegistraPacienteResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ValidaDatosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ValidaDatos", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.ValidaDatosRequestBody Body;
+        
+        public ValidaDatosRequest() {
+        }
+        
+        public ValidaDatosRequest(global::SALUD_CDMX.wsSalud.ValidaDatosRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ValidaDatosRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string Curp;
+        
+        public ValidaDatosRequestBody() {
+        }
+        
+        public ValidaDatosRequestBody(string Curp) {
+            this.Curp = Curp;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ValidaDatosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ValidaDatosResponse", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.ValidaDatosResponseBody Body;
+        
+        public ValidaDatosResponse() {
+        }
+        
+        public ValidaDatosResponse(global::SALUD_CDMX.wsSalud.ValidaDatosResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ValidaDatosResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Xml.Linq.XElement ValidaDatosResult;
+        
+        public ValidaDatosResponseBody() {
+        }
+        
+        public ValidaDatosResponseBody(System.Xml.Linq.XElement ValidaDatosResult) {
+            this.ValidaDatosResult = ValidaDatosResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ValidaCitaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ValidaCita", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.ValidaCitaRequestBody Body;
+        
+        public ValidaCitaRequest() {
+        }
+        
+        public ValidaCitaRequest(global::SALUD_CDMX.wsSalud.ValidaCitaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ValidaCitaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string idCita;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string idPersona;
+        
+        public ValidaCitaRequestBody() {
+        }
+        
+        public ValidaCitaRequestBody(string idCita, string idPersona) {
+            this.idCita = idCita;
+            this.idPersona = idPersona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ValidaCitaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ValidaCitaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.ValidaCitaResponseBody Body;
+        
+        public ValidaCitaResponse() {
+        }
+        
+        public ValidaCitaResponse(global::SALUD_CDMX.wsSalud.ValidaCitaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ValidaCitaResponseBody {
+        
+        public ValidaCitaResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class VerificaCuentaMailRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="VerificaCuentaMail", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequestBody Body;
+        
+        public VerificaCuentaMailRequest() {
+        }
+        
+        public VerificaCuentaMailRequest(global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class VerificaCuentaMailRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string id;
+        
+        public VerificaCuentaMailRequestBody() {
+        }
+        
+        public VerificaCuentaMailRequestBody(string id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class VerificaCuentaMailResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="VerificaCuentaMailResponse", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponseBody Body;
+        
+        public VerificaCuentaMailResponse() {
+        }
+        
+        public VerificaCuentaMailResponse(global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class VerificaCuentaMailResponseBody {
+        
+        public VerificaCuentaMailResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class VerificaCuentaTelefonoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="VerificaCuentaTelefono", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequestBody Body;
+        
+        public VerificaCuentaTelefonoRequest() {
+        }
+        
+        public VerificaCuentaTelefonoRequest(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class VerificaCuentaTelefonoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string curp;
+        
+        public VerificaCuentaTelefonoRequestBody() {
+        }
+        
+        public VerificaCuentaTelefonoRequestBody(string curp) {
+            this.curp = curp;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class VerificaCuentaTelefonoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="VerificaCuentaTelefonoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponseBody Body;
+        
+        public VerificaCuentaTelefonoResponse() {
+        }
+        
+        public VerificaCuentaTelefonoResponse(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class VerificaCuentaTelefonoResponseBody {
+        
+        public VerificaCuentaTelefonoResponseBody() {
         }
     }
     
@@ -127,7 +541,7 @@ namespace SALUD_CDMX.wsSalud {
             return base.Channel.IniciaSesion(request);
         }
         
-        public string IniciaSesion(string user, string pass) {
+        public System.Xml.Linq.XElement IniciaSesion(string user, string pass) {
             global::SALUD_CDMX.wsSalud.IniciaSesionRequest inValue = new global::SALUD_CDMX.wsSalud.IniciaSesionRequest();
             inValue.Body = new global::SALUD_CDMX.wsSalud.IniciaSesionRequestBody();
             inValue.Body.user = user;
@@ -147,6 +561,158 @@ namespace SALUD_CDMX.wsSalud {
             inValue.Body.user = user;
             inValue.Body.pass = pass;
             return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).IniciaSesionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        global::SALUD_CDMX.wsSalud.RegistraPacienteResponse global::SALUD_CDMX.wsSalud.SaludSoap.RegistraPaciente(global::SALUD_CDMX.wsSalud.RegistraPacienteRequest request) {
+            return base.Channel.RegistraPaciente(request);
+        }
+        
+        public System.Xml.Linq.XElement RegistraPaciente(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+            global::SALUD_CDMX.wsSalud.RegistraPacienteRequest inValue = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.pass = pass;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apPaterno = apPaterno;
+            inValue.Body.apMaterno = apMaterno;
+            inValue.Body.genero = genero;
+            inValue.Body.fechaNac = fechaNac;
+            inValue.Body.curp = curp;
+            inValue.Body.nombreTutor = nombreTutor;
+            inValue.Body.apPaternoTutor = apPaternoTutor;
+            inValue.Body.apMaternoTutor = apMaternoTutor;
+            inValue.Body.generoTutor = generoTutor;
+            inValue.Body.fechaNacTutor = fechaNacTutor;
+            inValue.Body.curpTutor = curpTutor;
+            inValue.Body.idPer = idPer;
+            global::SALUD_CDMX.wsSalud.RegistraPacienteResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).RegistraPaciente(inValue);
+            return retVal.Body.RegistraPacienteResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.RegistraPacienteResponse> global::SALUD_CDMX.wsSalud.SaludSoap.RegistraPacienteAsync(global::SALUD_CDMX.wsSalud.RegistraPacienteRequest request) {
+            return base.Channel.RegistraPacienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.RegistraPacienteResponse> RegistraPacienteAsync(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+            global::SALUD_CDMX.wsSalud.RegistraPacienteRequest inValue = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody();
+            inValue.Body.usuario = usuario;
+            inValue.Body.pass = pass;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apPaterno = apPaterno;
+            inValue.Body.apMaterno = apMaterno;
+            inValue.Body.genero = genero;
+            inValue.Body.fechaNac = fechaNac;
+            inValue.Body.curp = curp;
+            inValue.Body.nombreTutor = nombreTutor;
+            inValue.Body.apPaternoTutor = apPaternoTutor;
+            inValue.Body.apMaternoTutor = apMaternoTutor;
+            inValue.Body.generoTutor = generoTutor;
+            inValue.Body.fechaNacTutor = fechaNacTutor;
+            inValue.Body.curpTutor = curpTutor;
+            inValue.Body.idPer = idPer;
+            return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).RegistraPacienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        global::SALUD_CDMX.wsSalud.ValidaDatosResponse global::SALUD_CDMX.wsSalud.SaludSoap.ValidaDatos(global::SALUD_CDMX.wsSalud.ValidaDatosRequest request) {
+            return base.Channel.ValidaDatos(request);
+        }
+        
+        public System.Xml.Linq.XElement ValidaDatos(string Curp) {
+            global::SALUD_CDMX.wsSalud.ValidaDatosRequest inValue = new global::SALUD_CDMX.wsSalud.ValidaDatosRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.ValidaDatosRequestBody();
+            inValue.Body.Curp = Curp;
+            global::SALUD_CDMX.wsSalud.ValidaDatosResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).ValidaDatos(inValue);
+            return retVal.Body.ValidaDatosResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaDatosResponse> global::SALUD_CDMX.wsSalud.SaludSoap.ValidaDatosAsync(global::SALUD_CDMX.wsSalud.ValidaDatosRequest request) {
+            return base.Channel.ValidaDatosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaDatosResponse> ValidaDatosAsync(string Curp) {
+            global::SALUD_CDMX.wsSalud.ValidaDatosRequest inValue = new global::SALUD_CDMX.wsSalud.ValidaDatosRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.ValidaDatosRequestBody();
+            inValue.Body.Curp = Curp;
+            return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).ValidaDatosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        global::SALUD_CDMX.wsSalud.ValidaCitaResponse global::SALUD_CDMX.wsSalud.SaludSoap.ValidaCita(global::SALUD_CDMX.wsSalud.ValidaCitaRequest request) {
+            return base.Channel.ValidaCita(request);
+        }
+        
+        public void ValidaCita(string idCita, string idPersona) {
+            global::SALUD_CDMX.wsSalud.ValidaCitaRequest inValue = new global::SALUD_CDMX.wsSalud.ValidaCitaRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.ValidaCitaRequestBody();
+            inValue.Body.idCita = idCita;
+            inValue.Body.idPersona = idPersona;
+            global::SALUD_CDMX.wsSalud.ValidaCitaResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).ValidaCita(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaCitaResponse> global::SALUD_CDMX.wsSalud.SaludSoap.ValidaCitaAsync(global::SALUD_CDMX.wsSalud.ValidaCitaRequest request) {
+            return base.Channel.ValidaCitaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.ValidaCitaResponse> ValidaCitaAsync(string idCita, string idPersona) {
+            global::SALUD_CDMX.wsSalud.ValidaCitaRequest inValue = new global::SALUD_CDMX.wsSalud.ValidaCitaRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.ValidaCitaRequestBody();
+            inValue.Body.idCita = idCita;
+            inValue.Body.idPersona = idPersona;
+            return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).ValidaCitaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse global::SALUD_CDMX.wsSalud.SaludSoap.VerificaCuentaMail(global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest request) {
+            return base.Channel.VerificaCuentaMail(request);
+        }
+        
+        public void VerificaCuentaMail(string id) {
+            global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest inValue = new global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequestBody();
+            inValue.Body.id = id;
+            global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).VerificaCuentaMail(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse> global::SALUD_CDMX.wsSalud.SaludSoap.VerificaCuentaMailAsync(global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest request) {
+            return base.Channel.VerificaCuentaMailAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaMailResponse> VerificaCuentaMailAsync(string id) {
+            global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest inValue = new global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.VerificaCuentaMailRequestBody();
+            inValue.Body.id = id;
+            return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).VerificaCuentaMailAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse global::SALUD_CDMX.wsSalud.SaludSoap.VerificaCuentaTelefono(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest request) {
+            return base.Channel.VerificaCuentaTelefono(request);
+        }
+        
+        public void VerificaCuentaTelefono(string curp) {
+            global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest inValue = new global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequestBody();
+            inValue.Body.curp = curp;
+            global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).VerificaCuentaTelefono(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse> global::SALUD_CDMX.wsSalud.SaludSoap.VerificaCuentaTelefonoAsync(global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest request) {
+            return base.Channel.VerificaCuentaTelefonoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoResponse> VerificaCuentaTelefonoAsync(string curp) {
+            global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest inValue = new global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequest();
+            inValue.Body = new global::SALUD_CDMX.wsSalud.VerificaCuentaTelefonoRequestBody();
+            inValue.Body.curp = curp;
+            return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).VerificaCuentaTelefonoAsync(inValue);
         }
     }
 }
