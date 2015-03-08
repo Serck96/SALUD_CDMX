@@ -7,16 +7,7 @@
         <div class="col-md-8">
 
             <div class="container">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-
-
-                <img src="Imagenes/Logos-Sedesa-Sspdf.png" />
+                
             </div>
         </div>
         <div class="col-md-4">

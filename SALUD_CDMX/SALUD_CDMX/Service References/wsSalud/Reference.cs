@@ -198,10 +198,33 @@ namespace SALUD_CDMX.wsSalud {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
         public string idPer;
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
+        public string mail;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
+        public string mailTutor;
+        
         public RegistraPacienteRequestBody() {
         }
         
-        public RegistraPacienteRequestBody(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+        public RegistraPacienteRequestBody(
+                    string usuario, 
+                    string pass, 
+                    string nombre, 
+                    string apPaterno, 
+                    string apMaterno, 
+                    string genero, 
+                    string fechaNac, 
+                    string curp, 
+                    string nombreTutor, 
+                    string apPaternoTutor, 
+                    string apMaternoTutor, 
+                    string generoTutor, 
+                    string fechaNacTutor, 
+                    string curpTutor, 
+                    string idPer, 
+                    string mail, 
+                    string mailTutor) {
             this.usuario = usuario;
             this.pass = pass;
             this.nombre = nombre;
@@ -217,6 +240,8 @@ namespace SALUD_CDMX.wsSalud {
             this.fechaNacTutor = fechaNacTutor;
             this.curpTutor = curpTutor;
             this.idPer = idPer;
+            this.mail = mail;
+            this.mailTutor = mailTutor;
         }
     }
     
@@ -568,7 +593,24 @@ namespace SALUD_CDMX.wsSalud {
             return base.Channel.RegistraPaciente(request);
         }
         
-        public System.Xml.Linq.XElement RegistraPaciente(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+        public System.Xml.Linq.XElement RegistraPaciente(
+                    string usuario, 
+                    string pass, 
+                    string nombre, 
+                    string apPaterno, 
+                    string apMaterno, 
+                    string genero, 
+                    string fechaNac, 
+                    string curp, 
+                    string nombreTutor, 
+                    string apPaternoTutor, 
+                    string apMaternoTutor, 
+                    string generoTutor, 
+                    string fechaNacTutor, 
+                    string curpTutor, 
+                    string idPer, 
+                    string mail, 
+                    string mailTutor) {
             global::SALUD_CDMX.wsSalud.RegistraPacienteRequest inValue = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequest();
             inValue.Body = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody();
             inValue.Body.usuario = usuario;
@@ -586,6 +628,8 @@ namespace SALUD_CDMX.wsSalud {
             inValue.Body.fechaNacTutor = fechaNacTutor;
             inValue.Body.curpTutor = curpTutor;
             inValue.Body.idPer = idPer;
+            inValue.Body.mail = mail;
+            inValue.Body.mailTutor = mailTutor;
             global::SALUD_CDMX.wsSalud.RegistraPacienteResponse retVal = ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).RegistraPaciente(inValue);
             return retVal.Body.RegistraPacienteResult;
         }
@@ -595,7 +639,24 @@ namespace SALUD_CDMX.wsSalud {
             return base.Channel.RegistraPacienteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.RegistraPacienteResponse> RegistraPacienteAsync(string usuario, string pass, string nombre, string apPaterno, string apMaterno, string genero, string fechaNac, string curp, string nombreTutor, string apPaternoTutor, string apMaternoTutor, string generoTutor, string fechaNacTutor, string curpTutor, string idPer) {
+        public System.Threading.Tasks.Task<global::SALUD_CDMX.wsSalud.RegistraPacienteResponse> RegistraPacienteAsync(
+                    string usuario, 
+                    string pass, 
+                    string nombre, 
+                    string apPaterno, 
+                    string apMaterno, 
+                    string genero, 
+                    string fechaNac, 
+                    string curp, 
+                    string nombreTutor, 
+                    string apPaternoTutor, 
+                    string apMaternoTutor, 
+                    string generoTutor, 
+                    string fechaNacTutor, 
+                    string curpTutor, 
+                    string idPer, 
+                    string mail, 
+                    string mailTutor) {
             global::SALUD_CDMX.wsSalud.RegistraPacienteRequest inValue = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequest();
             inValue.Body = new global::SALUD_CDMX.wsSalud.RegistraPacienteRequestBody();
             inValue.Body.usuario = usuario;
@@ -613,6 +674,8 @@ namespace SALUD_CDMX.wsSalud {
             inValue.Body.fechaNacTutor = fechaNacTutor;
             inValue.Body.curpTutor = curpTutor;
             inValue.Body.idPer = idPer;
+            inValue.Body.mail = mail;
+            inValue.Body.mailTutor = mailTutor;
             return ((global::SALUD_CDMX.wsSalud.SaludSoap)(this)).RegistraPacienteAsync(inValue);
         }
         

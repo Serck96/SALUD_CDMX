@@ -54,7 +54,7 @@ namespace SALUD_CDMX.Paciente
                 {
                     pnTutor.Visible = true;
                 }
-                else 
+                else
                 {
                     pnTutor.Visible = false;
                 }
@@ -63,20 +63,20 @@ namespace SALUD_CDMX.Paciente
 
         protected void btnGuardaPaciente_Click(object sender, EventArgs e)
         {
-            if(Session["id"] != null)
-            { 
-            wsSalud.SaludSoapClient ws = new wsSalud.SaludSoapClient();
-            String id = Convert.ToString(ws.RegistraPaciente(txtUser.Text, txtContraseña.Text, txtNombre.Text, txtApPaterno.Text, txtApMAterno.Text, rlGenero.SelectedValue,
-                textFecha.Text, txtCURP.Text, txtNombreTutor.Text, txtApPaternoTutor.Text, txtApMaternoTutor.Text, rlGeneroTutor.SelectedValue,
-                txtFechaTutor.Text, txtCUrpTutor.Text, Convert.ToString(Session["id"])));
-            Response.Redirect("~/GeneraCita.aspx?iP=" + id + "");
+            if (Session["id"] != null)
+            {
+                wsSalud.SaludSoapClient ws = new wsSalud.SaludSoapClient();
+                String id = Convert.ToString(ws.RegistraPaciente(txtUser.Text, txtContraseña.Text, txtNombre.Text, txtApPaterno.Text, txtApMAterno.Text, rlGenero.SelectedValue,
+                    textFecha.Text, txtCURP.Text, txtNombreTutor.Text, txtApPaternoTutor.Text, txtApMaternoTutor.Text, rlGeneroTutor.SelectedValue,
+                    txtFechaTutor.Text, txtCUrpTutor.Text, Convert.ToString(Session["id"]), txtMail.Text, txtMailTutor.Text));
+                Response.Redirect("~/GeneraCita.aspx?iP=" + id + "");
             }
             else
             {
                 wsSalud.SaludSoapClient ws = new wsSalud.SaludSoapClient();
                 String id = Convert.ToString(ws.RegistraPaciente(txtUser.Text, txtContraseña.Text, txtNombre.Text, txtApPaterno.Text, txtApMAterno.Text, rlGenero.SelectedValue,
                     textFecha.Text, txtCURP.Text, txtNombreTutor.Text, txtApPaternoTutor.Text, txtApMaternoTutor.Text, rlGeneroTutor.SelectedValue,
-                    txtFechaTutor.Text, txtCUrpTutor.Text, ""));
+                    txtFechaTutor.Text, txtCUrpTutor.Text, "", txtMail.Text, txtMailTutor.Text));
                 XmlDocument docX = new XmlDocument();
                 docX.LoadXml(id);
                 XmlNodeList nID, nNombre, nApPaterno, nApMaterno, nGenero, nFecha;

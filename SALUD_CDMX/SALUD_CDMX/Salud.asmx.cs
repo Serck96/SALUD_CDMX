@@ -65,12 +65,12 @@ namespace SALUD_CDMX
         [WebMethod]
         public XmlDocument RegistraPaciente(String usuario, String pass, String nombre, String apPaterno, String apMaterno,
             String genero, String fechaNac, String curp, String nombreTutor, String apPaternoTutor, String apMaternoTutor,
-            String generoTutor, String fechaNacTutor, String curpTutor, String idPer)
+            String generoTutor, String fechaNacTutor, String curpTutor, String idPer, String mail, String mailTutor)
         {
             Datos sql = new Datos();
             DataTable tbl = sql.TraeDataTable("sp_GuardaPaciente", usuario, pass, nombre, apPaterno, apMaterno,
                 genero, fechaNac, curp, nombreTutor, apPaternoTutor, apMaternoTutor, generoTutor,fechaNacTutor,
-                curpTutor,idPer);
+                curpTutor,idPer, mail, mailTutor);
             int cont = 0;
             String resultado = "<xml>";
             foreach (DataRow row in tbl.Rows)

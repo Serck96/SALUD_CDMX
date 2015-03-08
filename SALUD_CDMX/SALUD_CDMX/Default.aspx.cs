@@ -42,7 +42,9 @@ namespace SALUD_CDMX
                         Session["Rol"] = nRol[z].InnerText;
                         if (nID[z].InnerText == "1")
                         {
-                            Response.Redirect("~/Paciente/index.aspx");
+                            Extras xt = new Extras();
+                            
+                            Response.Redirect("~/Pacientes.aspx?iP="+xt.encriptaB64(nID[z].InnerText));
                         }
                         else if (nID[z].InnerText == "2")
                         {

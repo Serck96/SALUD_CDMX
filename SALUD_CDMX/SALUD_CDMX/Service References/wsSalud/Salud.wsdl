@@ -41,6 +41,8 @@
             <s:element minOccurs="0" maxOccurs="1" name="fechaNacTutor" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="curpTutor" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="idPer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailTutor" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
